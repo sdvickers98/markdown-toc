@@ -1,5 +1,5 @@
 # markdown-toc
-Bash script to generate a table of contents (ToC) for a markdown file based on headers
+Bash script to generate a table of contents (ToC) for a markdown file based on headers. This certainly isn't the most elegant solution, but it gets the job done (kinda...see below for exceptions).
 
 ## Important notes about usage
 
