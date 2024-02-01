@@ -3,6 +3,8 @@ Bash script to generate a table of contents (ToC) for a markdown file based on h
 
 This certainly isn't the most elegant solution, but it gets the job done (kinda...see below for exceptions).
 
+Basically, this script kinda sucks, but it works okay if you don't mind doing a small bit of manual work in certain scenarios.
+
 ## Important notes about usage
 
 This script is only inteded to work with ATX style headers, i.e. headers indicated using the hashbang symbol (#). Also, when I wrote the script, I only needed to account for h1 through h4. If you want to create ToC entries for smaller headers, it's not too hard to add cases in the script to account for those.
@@ -44,7 +46,6 @@ For the layout above, the script would generate the following ToC:
 
 Another note is that if you use the hash symbol for anything other than headers (such as comments in code blocks), this script will generate a ToC entry for those lines and you will need to manually remove them. Also, any symbols that will mess with the URL fragment will not work properly, i.e. a forward slash (/) or dash (-) in the header.
 
-Basically, this script kinda sucks lol, but it works okay if you don't mind doing a small bit of manual work in certain scenarios.
 
 
 
