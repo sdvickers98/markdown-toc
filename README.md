@@ -12,20 +12,20 @@ In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h
 Because of this, your first header must be an h1. Here's an example of a header layout that would work well with the script:
 
 > # Header 1
-
+>
 > ## Header 2
-
-### Header 3
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-# Header 1
-
-## Header 2
+>
+> ### Header 3
+>
+> ## Header 2
+>
+> ### Header 3
+>
+> #### Header 4
+>
+> # Header 1
+>
+> ## Header 2
 
 Another note is that if you use the hash symbol for anything other than headers (such as comments in code blocks), this script will generate a ToC entry for those lines and you will need to manually remove them. Also, any symbols that will mess with the URL fragment will not work properly, i.e. a forward slash (/) or dash (-) in the header.
 
