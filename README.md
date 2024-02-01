@@ -13,7 +13,7 @@ In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h
 
 Because of this, your first header must be an h1. Also, when I wrote the script, I only needed to account for h1 through h4. If you want to create ToC entries for smaller headers, it's not too hard to add cases in the script to account for those.
 
-Here's an example of a header layout that would work well with the script:
+Here's an example of a header layout that would work well with the script (of course, you wouldn't want any headers with the same name to avoid confusing the ToC):
 
 > # Header 1
 >
