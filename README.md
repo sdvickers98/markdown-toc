@@ -11,7 +11,7 @@ It's also worth noting that this script works best if you don't skip header size
 
 In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h2 to h4. When going from a smaller header size to a larger one, this doesn't matter.
 
-Because of this, your first header must be an h1. 
+Because of this, your first header should be an h1. 
 
 Here's an example of a header layout that would work well with the script (of course, you wouldn't want any headers with the same name to avoid confusing the ToC):
 
