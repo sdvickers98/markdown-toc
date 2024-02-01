@@ -11,11 +11,14 @@ In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h
 
 Because of this, your first header must be an h1. Here's an example of a header layout that would work well with the script:
 
-# Header 1
+Header 1
+------
 
-## Header 2
+Header 2
+-----
 
-### Header 3
+Header 3
+----
 
 ## Header 2
 
