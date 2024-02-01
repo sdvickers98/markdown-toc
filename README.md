@@ -5,13 +5,13 @@ This certainly isn't the most elegant solution, but it gets the job done (kinda.
 
 ## Important notes about usage
 
-This script is only inteded to work with ATX style headers, i.e. headers indicated using the hashbang symbol (#).
+This script is only inteded to work with ATX style headers, i.e. headers indicated using the hashbang symbol (#). Also, when I wrote the script, I only needed to account for h1 through h4. If you want to create ToC entries for smaller headers, it's not too hard to add cases in the script to account for those.
 
 It's also worth noting that this script works best if you don't skip header sizes when going from a larger size to a smaller size, otherwise the indentation will look weird. 
 
 In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h2 to h4. When going from a smaller header size to a larger one, this doesn't matter.
 
-Because of this, your first header must be an h1. Also, when I wrote the script, I only needed to account for h1 through h4. If you want to create ToC entries for smaller headers, it's not too hard to add cases in the script to account for those.
+Because of this, your first header must be an h1. 
 
 Here's an example of a header layout that would work well with the script (of course, you wouldn't want any headers with the same name to avoid confusing the ToC):
 
