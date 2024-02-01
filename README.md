@@ -1,6 +1,8 @@
 # markdown-toc
 Bash script to generate a table of contents (ToC) for a markdown file based on headers
 
+## Important notes about usage
+
 It's worth noting that this script works best if you don't skip header sizes when going from a larger size to a smaller size, otherwise the indentation will look weird. 
 
 In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h2 to h4. When going from a smaller header size to a larger one, this doesn't matter.
@@ -11,7 +13,7 @@ Another note is that if you use the hash symbol for anything other than headers 
 
 Basically, this script kinda sucks lol, but it works okay if you don't mind doing a small bit of manual work in certain scenarios.
 
-Usage:
+## Usage:
 ```
 ./markdown-toc.sh <markdown file>
 ```
