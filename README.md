@@ -54,7 +54,7 @@ For the layout above, the script would generate the following ToC:
 
 
 
-## Usage:
+## Usage
 ```
 ./markdown-toc.sh <markdown file>
 ```
