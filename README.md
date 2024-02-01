@@ -10,15 +10,12 @@ It's worth noting that this script works best if you don't skip header sizes whe
 In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h2 to h4. When going from a smaller header size to a larger one, this doesn't matter.
 
 Because of this, your first header must be an h1. Here's an example of a header layout that would work well with the script:
+~~~
+# Header 1
 
-Header 1
-------
+## Header 2
 
-Header 2
------
-
-Header 3
-----
+### Header 3
 
 ## Header 2
 
@@ -29,7 +26,7 @@ Header 3
 # Header 1
 
 ## Header 2
-
+~~~
 
 Another note is that if you use the hash symbol for anything other than headers (such as comments in code blocks), this script will generate a ToC entry for those lines and you will need to manually remove them. Also, any symbols that will mess with the URL fragment will not work properly, i.e. a forward slash (/) or dash (-) in the header.
 
