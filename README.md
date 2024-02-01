@@ -15,6 +15,10 @@ In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h
 
 Because of this, your first header should be an h1. 
 
+Another note is that if you use the hash symbol for anything other than headers (such as comments in code blocks), this script will generate a ToC entry for those lines and you will need to manually remove them. Also, any symbols that will mess with the URL fragment will not work properly, i.e. a forward slash (/) or dash (-) in the header.
+
+## Example
+
 Here's an example of a header layout that would work well with the script (of course, you wouldn't want any headers with the same name to avoid confusing the ToC):
 
 > # Header 1
@@ -44,7 +48,6 @@ For the layout above, the script would generate the following ToC:
 * [Header 1](#header-1)
 	* [Header 2](#header-2)
 
-Another note is that if you use the hash symbol for anything other than headers (such as comments in code blocks), this script will generate a ToC entry for those lines and you will need to manually remove them. Also, any symbols that will mess with the URL fragment will not work properly, i.e. a forward slash (/) or dash (-) in the header.
 
 
 
