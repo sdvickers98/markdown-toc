@@ -3,25 +3,19 @@ Bash script to generate a table of contents (ToC) for a markdown file based on h
 
 This certainly isn't the most elegant solution, but it gets the job done (kinda...see below for exceptions).
 
-Basically, this script kinda sucks, but it works okay if you don't mind doing a small bit of manual work in certain scenarios.
-
 ## Important notes about usage
 
-This script is only inteded to work with ATX style headers, i.e. headers indicated using the hashbang symbol (#). Also, when I wrote the script, I only needed to account for h1 through h4. If you want to create ToC entries for smaller headers, it's not too hard to add cases in the script to account for those.
+The original script has support for headers as small as h4, but does not allow you to skip header sizes without creating weird indentation (e.g. jumping from an h1 to an h3). 
 
-It's also worth noting that this script works best if you don't skip header sizes when going from a larger size to a smaller size, otherwise the indentation will look weird. 
+Version 2 of the script provides support for cases where you jump from h1 to h3, then to an h2, but want the level of indentation to be the same for the h3 and h2. The caveat is that it only supports h1, h2, and h3. Any smaller headers will not have ToC entries created. 
 
-In other words, you don't want to skip from an h1 to h3 or h4, or skip from an h2 to h4. When going from a smaller header size to a larger one, this doesn't matter.
+Unless you want to create entries for h4 headers, I recommend using v2.
 
-Because of this, your first header should be an h1 unless you want the first entry in the ToC to be indented. 
-
-Another note is that if you use the hash symbol for anything other than headers (such as comments in code blocks), this script will generate a ToC entry for those lines and you will need to manually remove them. 
-
-Also, any symbols that will mess with the URL fragment will not work properly, i.e. a forward slash (/) or dash (-) in the header.
+**NOTE**: The script will generate a ToC entry for any line that begins with a '#'. This includes comments in code blocks, so be sure to remove any unwanted ToC entries created this way.
 
 ## Example
 
-Here's an example of a header layout that would work well with the script (of course, you wouldn't want any headers with the same name to avoid confusing the ToC):
+Here's an example of a header layout that would work well with version 2 of the script (of course, you wouldn't want any headers with the same name to avoid confusing the ToC):
 
 > # Header 1
 >
@@ -31,24 +25,26 @@ Here's an example of a header layout that would work well with the script (of co
 >
 > ## Header 2
 >
-> ### Header 3
->
-> #### Header 4
->
 > # Header 1
 >
+> ### Header 3
+>
 > ## Header 2
-> 
+>
+> ### Header 3
+>
+> # Header 1
 
 For the layout above, the script would generate the following ToC:
  * [Header 1](#header-1)
 	* [Header 2](#header-2)
 		* [Header 3](#header-3)
 	* [Header 2](#header-2)
-		* [Header 3](#header-3)
-			* [Header 4](#header-4)
 * [Header 1](#header-1)
+	* [Header 3](#header-3)
 	* [Header 2](#header-2)
+		* [Header 3](#header-3)
+* [Header 1](#header-1)
 
 
 
@@ -56,6 +52,6 @@ For the layout above, the script would generate the following ToC:
 
 ## Usage
 ```
-./markdown-toc.sh <markdown file>
+./markdown-toc_v2.sh <markdown file>
 ```
-The table of contents will be generated in markdown format and printed out in the shell. Simply copy the output and paste it into your markdown file. Be sure to make corrections for situations like those mentioned above.
+The table of contents will be generated in markdown format and printed out in the shell. Simply copy the output and paste it into your markdown file.
