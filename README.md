@@ -7,7 +7,7 @@ This certainly isn't the most elegant solution, but it gets the job done (kinda.
 
 The original script has support for headers as small as h4, but does not allow you to skip header sizes without creating weird indentation (e.g. jumping from an h1 to an h3). 
 
-Version 2 of the script provides support for cases where you jump from h1 to h3, then to an h2, but want the level of indentation to be the same for the h3 and h2. The caveat is that it only supports h1, h2, and h3. Any smaller headers will not have ToC entries created. 
+Version 2 of the script provides support for cases like jumping from h1 to h3, then to an h2, but want the level of indentation to be the same for the h3 and h2. The caveat is that it only supports h1, h2, and h3. Any smaller headers will not have ToC entries created. 
 
 Unless you want to create entries for h4 headers, I recommend using v2.
 
